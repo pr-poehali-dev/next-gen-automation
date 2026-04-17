@@ -14,37 +14,38 @@ export function WorkSection() {
             isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"
           }`}
         >
+          <div className="mb-3 font-mono text-xs text-foreground/50">Слайд 2 / 5</div>
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            Проекты
+            Проблема
           </h2>
-          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Избранные работы</p>
+          <p className="font-mono text-sm text-foreground/60 md:text-base">/ С чем сталкивается рынок</p>
         </div>
 
         <div className="space-y-6 md:space-y-8">
           {[
             {
               number: "01",
-              title: "ТехноСтарт",
-              category: "Корпоративный портал",
-              year: "2024",
+              title: "Устаревшие решения",
+              category: "Рынок стоит на месте",
+              year: "Вызов",
               direction: "left",
             },
             {
               number: "02",
-              title: "АльфаТрейд",
-              category: "Финтех платформа",
-              year: "2024",
+              title: "Высокие издержки",
+              category: "Ресурсы тратятся неэффективно",
+              year: "Боль",
               direction: "right",
             },
             {
               number: "03",
-              title: "МедиаПульс",
-              category: "Медиа сервис",
-              year: "2023",
+              title: "Медленный рост",
+              category: "Потенциал остаётся нераскрытым",
+              year: "Потери",
               direction: "left",
             },
           ].map((project, i) => (
-            <ProjectCard key={i} project={project} index={i} isVisible={isVisible} />
+            <ProblemCard key={i} project={project} index={i} isVisible={isVisible} />
           ))}
         </div>
       </div>
@@ -52,7 +53,7 @@ export function WorkSection() {
   )
 }
 
-function ProjectCard({
+function ProblemCard({
   project,
   index,
   isVisible,
